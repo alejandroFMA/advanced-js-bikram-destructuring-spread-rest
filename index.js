@@ -32,14 +32,14 @@ const HIGH_TEMPERATURES = {
 };
 
 const {today, tomorrow} = HIGH_TEMPERATURES
+const {today:maximaHoy, tomorrow: maximaManana} = HIGH_TEMPERATURES}
 
-const maximaHoy = HIGH_TEMPERATURES.today;
-const maximaManana = HIGH_TEMPERATURES.tomorrow;
+//const maximaHoy = HIGH_TEMPERATURES.today;
+//const maximaManana = HIGH_TEMPERATURES.tomorrow;
 console.log(maximaHoy);
 console.log(maximaManana);
 
 //5
-
 function sumEveryOther(...rest){
  let total=0
  for (let i = 0; i < rest.length; i++) {
@@ -64,8 +64,7 @@ function countTheArgs(...rest){
     total= 0 
     for (let i = 0; i < rest.length; i++) {
        total++
-
-        
+       
 }  
     return total;
 }
@@ -113,7 +112,7 @@ function onlyUniques(...rest){
   function combineAllArrays (...rest){
     let total =[]
     for(let i=0; i<rest.length; i++){
-     total = [...total, ...rest[i]]
+     total = [...total,...rest[i]]
     }
     return total
  }
